@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نظام إدارة النتائج</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>🎓 نظام إدارة النتائج</h1>
+      <p>Student Results Management System</p>
+    </header>
+
+    <section class="stats">
+      <div class="stat">
+        <h3 id="total">0</h3>
+        <p>عدد الطلاب</p>
+      </div>
+
+      <div class="stat">
+        <h3 id="success">0</h3>
+        <p>الناجحون</p>
+      </div>
+
+      <div class="stat">
+        <h3 id="average">0</h3>
+        <p>متوسط الدرجات</p>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2>إضافة طالب جديد</h2>
+
+      <input type="text" id="name" placeholder="اسم الطالب">
+
+      <input type="text" id="subject" placeholder="اسم المادة">
+
+      <input type="number" id="grade"
+        placeholder="الدرجة من 100" min="0" max="100">
+
+      <button onclick="addStudent()">إضافة الطالب</button>
+    </section>
+
+    <section class="results">
+      <h2>قائمة النتائج</h2>
+
+      <input type="text" id="search"
+        placeholder="ابحث عن طالب..."
+        oninput="displayStudents()">
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>الاسم</th>
+              <th>المادة</th>
+              <th>الدرجة</th>
+              <th>التقدير</th>
+              <th>الحالة</th>
+              <th>حذف</th>
+            </tr>
+          </thead>
+
+          <tbody id="studentList"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+      </html>
+        
